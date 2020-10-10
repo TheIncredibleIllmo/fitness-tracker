@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.menu-caption {
+  display: inline-block;
+  padding-left: 1rem;
+  ;
+}
