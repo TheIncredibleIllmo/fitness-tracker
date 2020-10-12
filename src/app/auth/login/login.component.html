@@ -1,1 +1,39 @@
-<p>login works!</p>
+<section class="signup-form">
+  <form
+    [formGroup]="loginForm"
+    (submit)="login()"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="15px"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" placeholder="Email" formControlName="email" />
+      <mat-error *ngIf="loginForm.get('email').invalid"
+        >Field is required.</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <mat-error *ngIf="loginForm.get('password').invalid"
+        >Field is required.</mat-error
+      >
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="loginForm.invalid"
+    >
+      Log in
+    </button>
+  </form>
+</section>
