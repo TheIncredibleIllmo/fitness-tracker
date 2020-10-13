@@ -27,6 +27,7 @@ var header_component_1 = require("./navigation/header/header.component");
 var sidenav_list_component_1 = require("./navigation/sidenav-list/sidenav-list.component");
 var stop_training_component_1 = require("./training/stop-training/stop-training.component");
 var auth_service_1 = require("./auth/auth.service");
+var training_service_1 = require("./training/training.service");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -54,7 +55,7 @@ var AppModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 forms_2.ReactiveFormsModule,
             ],
-            providers: [auth_service_1.AuthService],
+            providers: [auth_service_1.AuthService, training_service_1.TrainingService],
             bootstrap: [app_component_1.AppComponent],
             entryComponents: [stop_training_component_1.StopTrainingComponent]
         })
